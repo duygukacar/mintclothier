@@ -1,0 +1,43 @@
+{
+  "name": "Gulp-Boilerplate",
+  "version": "1.0.0",
+  "description": "A project set-up using Gulp, Sass and Browserify",
+  "author": "Bolden <hello@bolden.nl>",
+  "license": "MIT",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/bolden/gulp-boilerplate"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel": "6.5.2",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babelify": "7.3.0",
+    "browser-sync": "2.14.0",
+    "browserify": "13.1.0",
+    "gsap": "^1.19.0",
+    "gulp": "3.9.1",
+    "gulp-clean-css": "^2.0.11",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-notify": "2.2.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "2.0.0",
+    "gulp-util": "3.0.7",
+    "imagemin-pngquant": "^5.0.0",
+    "postcss-conditionals": "^2.0.2",
+    "postcss-cssnext": "^2.4.0",
+    "postcss-nested": "^1.0.0",
+    "postcss-partial-import": "2.0.0",
+    "postcss-simple-vars": "3.0.0",
+    "randomcolor": "^0.4.4",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "vinyl-buffer": "1.0.0",
+    "vinyl-source-stream": "1.1.0",
+    "watchify": "3.7.0"
+  }
+}

@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Ala Trent Walton */
+  /* http://trentwalton.com/2011/09/07/css-hyphenation */
+  hyphens: auto;
+}
+
+body:before {
+  display: none;
+  @media (min-width: 40em) {
+    content: "sm";
+  }
+}
+
+abbr, acronym, blockquote, code, dir, kbd, listing, plaintext, q, samp, tt, var, xmp {
+  /* http://meyerweb.com/eric/thoughts/2012/12/17/where-to-avoid-css-hyphenation */
+  hyphens: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: white;
+}
+
+#container {
+  overflow: hidden;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+
+#background_video {
+  position: absolute;
+
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+
+  object-fit: cover;
+  height: 100%; width: 100%;
+}
+
+#video_cover {
+  position: absolute;
+  width: 100%; height: 100%;
+  background: url('http://vjs.zencdn.net/v/oceans.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#container {
+  height: 100%;
+}
+
+#overlay {
+  position: absolute;
+  top: 0; right: 0; left: 0; bottom: 0;
+}
+
+#main_content {
+  z-index: 2;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+
+  /* Vertical center */
+  top: 50%;
+  transform: translateY(-50%);
+}
