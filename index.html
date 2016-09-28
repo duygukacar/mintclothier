@@ -32,9 +32,9 @@
   </style>
   <body>
 
-    <div class="container">
+    <div class="container mw-100">
 
-      <video class="js-player" poster="mintclothier.png" controls>
+      <video class="js-player mw-100" poster="mintclothier.png" controls>
         <source src="mintclothier.webm" type="video/webm">
         <source src="mintclothier.mp4" type="video/mp4">
       </video>
@@ -48,8 +48,12 @@
 
     <script src="https://cdn.plyr.io/2.0.7/plyr.js"></script>
     <script>
-      plyr.setup(document.querySelector('.js-player'));
+      plyr.setup(document.querySelector('.js-player'), {
+        autoplay: true,
+        showPosterOnEnd: true
+      });
     </script>
+    <script src="https://cdn.rangetouch.com/0.0.9/rangetouch.js" async></script>
 
   </body>
 </html>
