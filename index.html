@@ -6,116 +6,52 @@
     <title>Mint Clothier</title>
     <meta name="description" content="Ever-conscious of the changing self-image of its customers, Mint Clothier is dedicated to offering wearable pieces which reflect the complexity of the human psyche.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.plyr.io/2.0.7/plyr.css">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.5.3/css/tachyons.min.css"/>
-    <style>
-      * {
-        box-sizing: border-box;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        margin: 0;
-        padding: 0;
-      }
-      html, body {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        color: #fff;
-      }
-
-      #container {
-        overflow: hidden;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-      }
-
-      #background_video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-        -o-object-fit: cover;
-           object-fit: cover;
-        height: 100%;
-        width: 100%;
-      }
-
-      #video_cover {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: url("mintclothier.png") no-repeat;
-        background-size: cover;
-        background-position: center;
-      }
-
-      #container {
-        height: 100%;
-      }
-
-      #overlay {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-      }
-
-      #main_content {
-        z-index: 2;
-        position: relative;
-        display: inline-block;
-        text-align: center;
-        width: 100%;
-        /* Vertical center */
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-                transform: translateY(-50%);
-      }
-
-    </style>
   </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #222;
+    }
+    p, a {
+      color: white;
+    }
+    a {
+      opacity: .4;
+    }
+    .meta {
+      opacity: .2;
+    }
+  </style>
   <body>
 
-    <div id="container">
+    <div class="container">
 
-      <video id="background_video" loop muted></video>
-      <div id="video_cover"></div>
-      <div class="dn" id="overlay"></div>
-      <section id="main_content dn">
-        <h1 class="f1 sans-serif normal">Mint Clothier</h1>
-      </section>
+      <video class="js-player" poster="mintclothier.png" controls>
+        <source src="mintclothier.webm" type="video/webm">
+        <source src="mintclothier.mp4" type="video/mp4">
+      </video>
+
+      <footer class="pa3 cf">
+        <p class="fl-ns meta sans-serif mb2 mb0-ns">Copyright &copy; 2016 Mint Clothier</p>
+        <p class="fr-ns sans-serif"><a href="mailto:&#105;&#110;&#102;&#111;&#064;&#109;&#105;&#110;&#116;&#099;&#108;&#111;&#116;&#104;&#105;&#101;&#114;&#046;&#099;&#111;&#109;">&#105;&#110;&#102;&#111;&#064;&#109;&#105;&#110;&#116;&#099;&#108;&#111;&#116;&#104;&#105;&#101;&#114;&#046;&#099;&#111;&#109;</a></p>
+      </footer>
 
     </div>
 
-    <script src="https://rishabhp.github.io/bideo.js/bideo.js"></script>
+    <script src="https://cdn.plyr.io/2.0.7/plyr.js"></script>
     <script>
-      (function () {
-
-        var bv = new Bideo();
-        bv.init({
-          videoEl: document.querySelector('#background_video'),
-          container: document.querySelector('body'),
-          resize: true,
-          src: [
-            {
-              src: 'mintclothier.webm',
-              type: 'video/webm;codecs="vp8, vorbis"'
-            },
-            {
-              src: 'mintclothier.mp4',
-              type: 'video/mp4'
-            }
-          ],
-          onLoad: function () {
-            document.querySelector('#video_cover').style.display = 'none';
-          }
-        });
-
-      }());
+      plyr.setup(document.querySelector('.js-player'), {
+        autoplay: true,
+        showPosterOnEnd: true
+      });
     </script>
 
   </body>
