@@ -52,6 +52,30 @@
         background-position: center;
       }
 
+      #video_controls {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+
+      #play img {
+        width: 100px;
+      }
+
+      #pause img {
+        width: 90px;
+      }
+
+      #pause {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        #video_controls {
+          display: none;
+        }
+      }
+
       #container {
         height: 100%;
       }
@@ -85,6 +109,16 @@
       <video id="background_video" loop muted></video>
       <div id="video_cover"></div>
       <div class="dn" id="overlay"></div>
+
+      <div id="video_controls">
+        <span id="play">
+          <img src="play.png">
+        </span>
+        <span id="pause">
+          <img src="pause.png">
+        </span>
+      </div>
+
       <section id="main_content dn">
         <h1 class="f1 sans-serif normal">Mint Clothier</h1>
       </section>
