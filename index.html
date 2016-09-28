@@ -6,7 +6,7 @@
     <title>Mint Clothier</title>
     <meta name="description" content="Ever-conscious of the changing self-image of its customers, Mint Clothier is dedicated to offering wearable pieces which reflect the complexity of the human psyche.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.plyr.io/2.0.7/plyr.css">
+    <link href="https://vjs.zencdn.net/5.8/video-js.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.5.3/css/tachyons.min.css"/>
   </head>
   <style>
@@ -29,31 +29,46 @@
     .meta {
       opacity: .2;
     }
+    .video-js,
+    .vjs-no-js,
+    .video-js .vjs-mouse-display:after,
+    .video-js .vjs-play-progress:after,
+    .vjs-error .vjs-error-display:before {
+      font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+    }
+    .video-js:hover .vjs-big-play-button,
+    .video-js .vjs-big-play-button:focus,
+    .vjs-menu li:focus,
+    .vjs-menu li:hover,
+    .video-js .vjs-load-progress,
+    .video-js .vjs-load-progress,
+    .video-js .vjs-load-progress div,
+    .video-js .vjs-slider {
+      background-color: rgba(255,255,255, 0.1);
+    }
+    .video-js .vjs-control-bar {
+      background-color: transparent;
+    }
   </style>
   <body>
 
-    <div class="container">
+    <div class="container mw-100 sans-serif">
 
-      <video class="js-player" poster="mintclothier.png" controls>
+      <video id="really-cool-video" class="video-js vjs-default-skin mw-100"
+       preload="auto" poster="mintclothier.png" controls autoplay
+       data-setup='{"fluid": true}'>
         <source src="mintclothier.webm" type="video/webm">
         <source src="mintclothier.mp4" type="video/mp4">
       </video>
 
       <footer class="pa3 cf">
-        <p class="fl-ns meta sans-serif mb2 mb0-ns">Copyright &copy; 2016 Mint Clothier</p>
-        <p class="fr-ns sans-serif"><a href="mailto:&#105;&#110;&#102;&#111;&#064;&#109;&#105;&#110;&#116;&#099;&#108;&#111;&#116;&#104;&#105;&#101;&#114;&#046;&#099;&#111;&#109;">&#105;&#110;&#102;&#111;&#064;&#109;&#105;&#110;&#116;&#099;&#108;&#111;&#116;&#104;&#105;&#101;&#114;&#046;&#099;&#111;&#109;</a></p>
+        <p class="fl-ns meta mb2 mb0-ns">Copyright &copy; 2016 Mint Clothier</p>
+        <p class="fr-ns"><a href="mailto:&#105;&#110;&#102;&#111;&#064;&#109;&#105;&#110;&#116;&#099;&#108;&#111;&#116;&#104;&#105;&#101;&#114;&#046;&#099;&#111;&#109;">&#105;&#110;&#102;&#111;&#064;&#109;&#105;&#110;&#116;&#099;&#108;&#111;&#116;&#104;&#105;&#101;&#114;&#046;&#099;&#111;&#109;</a></p>
       </footer>
 
     </div>
 
-    <script src="https://cdn.plyr.io/2.0.7/plyr.js"></script>
-    <script>
-      plyr.setup(document.querySelector('.js-player'), {
-        autoplay: true,
-        showPosterOnEnd: true
-      });
-    </script>
-    <script src="https://cdn.rangetouch.com/0.0.9/rangetouch.js" async></script>
+    <script src="https://vjs.zencdn.net/5.8/video.min.js"></script>
 
   </body>
 </html>
