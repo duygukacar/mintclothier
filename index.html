@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Mint Clothier</title>
-    <meta name="description" content="">
+    <meta name="description" content="Ever-conscious of the changing self-image of its customers, Mint Clothier is dedicated to offering wearable pieces which reflect the complexity of the human psyche.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.5.3/css/tachyons.min.css"/>
     <style>
@@ -19,7 +19,7 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
-        /*color: #fff;*/
+        color: #fff;
       }
 
       #container {
@@ -43,14 +43,14 @@
         width: 100%;
       }
 
-      /*#video_cover {
+      #video_cover {
         position: absolute;
         width: 100%;
         height: 100%;
-        background: url("http://vjs.zencdn.net/v/oceans.png") no-repeat;
+        background: url("mintclothier.png") no-repeat;
         background-size: cover;
         background-position: center;
-      }*/
+      }
 
       #container {
         height: 100%;
@@ -82,40 +82,40 @@
 
     <div id="container">
 
-      <!-- <video id="background_video" loop muted></video>
+      <video id="background_video" loop muted></video>
       <div id="video_cover"></div>
-      <div id="overlay"></div> -->
-
-      <section id="main_content">
-        <h1 class="f1 b">Mint Clothier</h1>
+      <div class="dn" id="overlay"></div>
+      <section id="main_content dn">
+        <h1 class="f1 sans-serif normal">Mint Clothier</h1>
       </section>
 
     </div>
 
     <script src="https://rishabhp.github.io/bideo.js/bideo.js"></script>
     <script>
-    //   (function () {
+      (function () {
 
-    //     var bv = new Bideo();
-    //     bv.init({
-    //       videoEl: document.querySelector('#background_video'),
-    //       container: document.querySelector('body'),
-    //       resize: true,
-    //       src: [
-    //         {
-    //           src: 'http://vjs.zencdn.net/v/oceans.mp4',
-    //           type: 'video/mp4'
-    //         },
-    //         {
-    //           src: 'http://vjs.zencdn.net/v/oceans.webm',
-    //           type: 'video/webm;codecs="vp8, vorbis"'
-    //         }
-    //       ],
-    //       onLoad: function () {
-    //         document.querySelector('#video_cover').style.display = 'none';
-    //       }
-    //     });
-    //   }());
+        var bv = new Bideo();
+        bv.init({
+          videoEl: document.querySelector('#background_video'),
+          container: document.querySelector('body'),
+          resize: true,
+          src: [
+            {
+              src: 'mintclothier.webm',
+              type: 'video/webm;codecs="vp8, vorbis"'
+            },
+            {
+              src: 'mintclothier.mp4',
+              type: 'video/mp4'
+            }
+          ],
+          onLoad: function () {
+            document.querySelector('#video_cover').style.display = 'none';
+          }
+        });
+
+      }());
     </script>
 
   </body>
